@@ -15,49 +15,56 @@
     rel="stylesheet"
   />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
   <div id="app">
-    <img
-      src="https://firebasestorage.googleapis.com/v0/b/fir-images-a61c9.appspot.com/o/codelab.png?alt=media&token=f45f808c-ce40-4b34-944c-8d8fac00e13d"
-    />
+    <header>
+      <img
+        src="https://firebasestorage.googleapis.com/v0/b/fir-images-a61c9.appspot.com/o/codelab.png?alt=media&token=f45f808c-ce40-4b34-944c-8d8fac00e13d"
+        alt="Firebase Meetup"
+      />
+      <div id="event-details-container">
+        <h1>Firebase Meetup</h1>
+        <p><i class="material-icons">calendar_today</i> October 30</p>
+        <p><i class="material-icons">location_city</i> San Francisco</p>
+        <button id="startRsvp">RSVP</button>
+      </div>
+    </header>
 
-    <section id="event-details-container">
-      <h1>Firebase Meetup</h1>
+    <main>
+      <section id="firebaseui-auth-container"></section>
 
-      <p><i class="material-icons">calendar_today</i> October 30</p>
-      <p><i class="material-icons">location_city</i> San Francisco</p>
-      <button id="startRsvp">RSVP</button>
-    </section>
+      <section id="description-container">
+        <h2>What We'll Be Doing</h2>
+        <p>Join us for a day full of Firebase Workshops and Pizza!</p>
+        <p id="number-attending"></p>
+      </section>
 
-    <hr />
+      <section id="guestbook-container">
+        <h2>Are You Attending?</h2>
+        <div id="rsvp-buttons">
+          <button id="rsvp-yes">YES</button>
+          <button id="rsvp-no">NO</button>
+        </div>
 
-    <section id="firebaseui-auth-container"></section>
+        <h2>Discussion</h2>
+        <form id="leave-message">
+          <label for="message">Leave a message: </label>
+          <input type="text" id="message" placeholder="Type your message here..." />
+          <button type="submit">
+            <i class="material-icons">send</i>
+            <span>Send</span>
+          </button>
+        </form>
 
-    <section id="description-container">
-      <h2>What we'll be doing</h2>
-      <p>Join us for a day full of Firebase Workshops and Pizza!</p>
-      <p id="number-attending"></p>
-    </section>
+        <section id="guestbook"></section>
+      </section>
+    </main>
 
-    <section id="guestbook-container">
-      <h2>Are you attending?</h2>
-      <button id="rsvp-yes">YES</button>
-      <button id="rsvp-no">NO</button>
-
-      <h2>Discussion</h2>
-
-      <form id="leave-message">
-        <label>Leave a message: </label>
-        <input type="text" id="message" />
-        <button type="submit">
-          <i class="material-icons">send</i>
-          <span>Send</span>
-        </button>
-      </form>
-
-      <section id="guestbook"></section>
-    </section>
+    <footer>
+      <p>&copy; 2024 Firebase Meetup. All Rights Reserved.</p>
+    </footer>
   </div>
 </body>

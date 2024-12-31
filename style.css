@@ -1,130 +1,129 @@
-@media all and (min-width:1200px){
-  #app{
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-}
-@media all and (min-width: 960px) and (max-width: 1199px) {
-  #app{
-    max-width: 900px;
-    margin: 0 auto;
-  }
-}
-
-@media all and (max-width: 599px) {
-  img{
-    width:100%;
-    height:200px;
-    object-fit: cover;
-  }
-}
-
-@media all and (min-width: 600px) {
-  section {
-    clear: both;
-    display: block;
-  }
-  #event-details-container{
-    clear: none;
-  }
-  img{
-    width:60%;
-    height:300px;
-    float: left;
-    border-radius: 8px;
-    object-fit: cover;
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-bottom: 20px;
- }
-}
-
-hr {
-  clear: both;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-section {
-  margin: 20px;
-}
-
-.material-icons {
-  padding-right: 10px;
-}
-
+/* General Styling */
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
 }
 
-h1, h2, h3, p {
-  font-family: 'Roboto', sans-serif;
-  font-weight: normal;
+header {
+  background-color: #3c439a;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
-h1 {
-  font-size: 48px;
+header img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+header h1 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+header p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+#startRsvp {
+  background-color: #fff;
+  color: #3c439a;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#startRsvp:hover {
+  background-color: #f9f9f9;
+  color: #3c439a;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-  margin-bottom: 0px;
-}
-
-label{
-  font-size: 18px;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 p {
-  font-size: 18px;
-  margin-top:10px;
-  margin-bottom:0px;
+  font-size: 16px;
 }
 
-#guestbook > p {
-  font-weight: lighter;
+form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+form input {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   font-size: 14px;
 }
 
-input{
+form button {
+  display: flex;
+  align-items: center;
+  background-color: #3c439a;
+  color: #fff;
   border: none;
-  border-bottom: 1px solid rgba(0,0,0,.12);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background-color: #2d327a;
+}
+
+#rsvp-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#rsvp-buttons button {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  border: 2px solid #3c439a;
+  background-color: #fff;
+  color: #3c439a;
+  transition: all 0.3s;
+}
+
+#rsvp-buttons button:hover {
+  background-color: #3c439a;
+  color: #fff;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #3c439a;
+  color: #fff;
   font-size: 14px;
-  padding: 4px 0;
-  background: 0 0;
-  text-align: left;
-  color: inherit;
-}
-
-button.clicked{
-  background-color: rgb(60, 67, 154);
-  border-color: rgb(60, 67, 154);
-  color: white;
-  outline-color: rgb(60, 67, 154);
-}
-
-button, button.firebaseui-id-submit.mdl-button--raised.mdl-button--colored{
-align-items: center;
-background-color: rgba(0, 0, 0, 0);
-border-color: rgb(60, 67, 154);
-border-radius: 4px;
-border-style: solid;
-border-width: 1px;
-box-shadow: none;
-color: rgb(60, 67, 154);
-cursor: default;
-display: inline-flex;
-font-family: Roboto, sans-serif;
-font-size: 14px;
-font-weight: bold;
-height: 36px;
-justify-content: center;
-margin: 8px 16px;
-outline-color: rgb(60, 67, 154);
-overflow: hidden;
-padding: 0px 15px;
-position: relative;
-text-align: center;
-text-transform: uppercase;
-vertical-align: middle;
 }
